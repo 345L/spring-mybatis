@@ -1,0 +1,27 @@
+server:
+  port: 8082
+#    context-path: /spring-boot-demo # 访问地址：http://localhost:8082/spring-boot-demo/路徑
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapping/*Mapper.xml
+#  type-aliases-package: com.example.demo.entity  # 注意：对应实体类的路径 指定后mapper.xml中返回类或参数类 不需要指定类全路径 只需要指定类名即可，指定的类需要存在指定目录下
+
+#jdbc 定义两个数据源
+spring:
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true
+      username: root
+      password: root
+      initialSize: 1  #初始化连接数
+      maxIdle: 20 #空闲连接池最大、设为0表示无限制
+      minIdle: 1  #空闲连接池的大小、设为0表示无限制
+      maxActive: 50 #最大激活数量、设为0表示无限制
+
+#showSql
+logging:
+  level:
+    com:
+      example:
+        mapper : debug

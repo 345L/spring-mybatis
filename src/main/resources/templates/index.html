@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div>
+        <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2152917400,1906120580&fm=15&gp=0.jpg" alt="log"/>
+
+        <ul>
+            <li>Office</li>
+            <li>Windows</li>
+            <li>支持</li>
+        </ul>
+    </div>
+测试数据
+
+    <div id="vue_det">
+        <h1>site : {{site}}</h1>
+        <h1>url : {{url}}</h1>
+        <h1>{{details()}}</h1>
+    </div>
+    <script type="text/javascript">
+        var vm = new Vue({
+            el: '#vue_det',
+            data: {
+                site: "菜鸟教程",
+                url: "www.runoob.com",
+                alexa: "10000"
+            },
+            methods: {
+                details: function() {
+                    return  this.site + " - 学的不仅是技术，更是梦想！";
+                }
+            }
+        })
+    </script>
+</body>
+</html>
