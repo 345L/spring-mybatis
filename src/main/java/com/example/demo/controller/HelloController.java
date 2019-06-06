@@ -14,6 +14,7 @@ public class HelloController {
     @RequestMapping(value = "/hello")
     public String hello() {
         System.out.println("11231");// 测试
+        System.out.println("11231");// 测试
         return "hello,Spring Boot";
     }
 
